@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <button id="btn-logout">Logout</button>
+  </header>
+
+  <main>
+    <div class="card small">
+      <h3>Add / Update Member</h3>
+      <input id="member-id" placeholder="(leave blank for new)">
+      <input id="member-name" placeholder="Member Name">
+      <input id="member-email" placeholder="Email">
+      <input id="member-phone" placeholder="Phone">
+      <input id="member-fee" placeholder="Fee Package">
+      <button id="btn-save-member">Save Member</button>
+      <button id="btn-delete-member">Delete Member</button>
+    </div>
+
+    <div class="card small">
+      <h2>Create Bill</h2>
+      <!-- Bill form -->
+      <form id="bill-form">
+        <label for="bill-member">Select Member:</label>
+        <select id="bill-member" required></select>
+
+        <input type="text" id="bill-amount" placeholder="Amount" required>
+        <input type="date" id="bill-date" required>
+
+        <!-- FIXED broken ID -->
+        <button type="submit" id="btn-create-bill">Create Bill</button>
+      </form>
+    </div>
+
+    <div class="card small">
+      <h3>Notifications</h3>
+      <input id="notif-title" placeholder="Title">
+      <textarea id="notif-msg" placeholder="Message"></textarea>
+      <!-- Make this a normal button (not submit) -->
+      <button type="button" id="btn-send-notif">Save Notification</button>
+    </div>
+
+    <div class="card small">
+      <h3>Export</h3>
+      <button id="btn-export-members">Export Members</button>
+      <button id="btn-export-bills">Export Bills</button>
+    </div>
+
+    <div class="card">
+      <h3>Supplement Store</h3>
+      <input id="supp-name" placeholder="Name">
+      <input id="supp-price" placeholder="Price">
+      <button id="btn-add-supp">Add</button>
+      <table id="supp-table" class="table"></table>
+    </div>
+
+    <div class="card">
+      <h3>Diet Details</h3>
+      <input id="diet-name" placeholder="Plan / Member">
+      <textarea id="diet-desc" placeholder="Description"></textarea>
+      <button id="btn-add-diet">Save</button>
+      <table id="diet-table" class="table"></table>
+    </div>
+
+    <div class="card">
+      <h3>Members List</h3>
+      <input id="search-members" placeholder="Search members">
+      <table id="members-table" class="table"></table>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

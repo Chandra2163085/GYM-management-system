@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Member Dashboard</title>
+  <link rel="stylesheet" href="member.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Member Dashboard</h1>
+    <button id="btn-logout">Logout</button>
+  </header>
+
+  <main>
+    <div class="card">
+      <h3>My Bills</h3>
+      <table id="my-bills" class="table"></table>
+    </div>
+    <div class="card">
+      <h3>Notifications</h3>
+      <ul id="member-notifs"></ul>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

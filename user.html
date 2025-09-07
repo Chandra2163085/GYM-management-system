@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="user.css">
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="firebase.js"></script>
+</head>
+<body>
+  <header>
+    <h1>User Dashboard</h1>
+    <button id="btn-logout">Logout</button>
+  </header>
+
+  <main>
+    <div class="card">
+      <h3>Search Members</h3>
+      <input id="search-query" placeholder="Search by name or email">
+      <table id="search-results" class="table"></table>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
