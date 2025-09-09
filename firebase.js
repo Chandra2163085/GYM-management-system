@@ -12,10 +12,9 @@ const firebaseConfig = {
 };
 
 const app = firebase.initializeApp(firebaseConfig);
-
-const auth = firebase.auth();
-
-const db = firebase.firestore();
+windows.auth = firebase.auth();
+windows.const db = firebase.firestore();
 
 export { auth, db };
+
 
