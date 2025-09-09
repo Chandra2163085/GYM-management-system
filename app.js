@@ -64,8 +64,8 @@ if ($("btn-logout")) {
 
 auth.onAuthStateChanged(async (user) => {
   if (!user) {
-    if (!window.location.pathname.includes("login.html")) {
-      window.location = "login.html";
+    if (!window.location.pathname.includes("index.html")) {
+      window.location = "index.html";
     }
   }
 });
@@ -306,3 +306,4 @@ if (window.location.pathname.endsWith("user.html")) {
     });
   }
 }
+
